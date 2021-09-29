@@ -1,10 +1,7 @@
 import { Request, Response } from 'express';
 import Todo from '../model/model';
 
-export const getAllTodos = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const getAllTodos = async (req: Request, res: Response) => {
   await Todo.find()
     .then((todos) => {
       res.send(todos);
